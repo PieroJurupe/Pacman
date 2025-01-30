@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 [gd_scene load_steps=18 format=3 uid="uid://eu2pnsgou17q"]
 
 [ext_resource type="Texture2D" uid="uid://cl0qogw6rvkfi" path="res://Assets/Laberintos/Laberinto-Vacio.png" id="1_6fb5j"]
 [ext_resource type="PackedScene" uid="uid://blc0ljpx535h4" path="res://nodos/jugador.tscn" id="2_kikk5"]
 [ext_resource type="Script" path="res://nodos/area_2d_2.gd" id="3_fghf6"]
 [ext_resource type="Texture2D" uid="uid://brekjsd1oxmmg" path="res://Assets/Puntos/PuntosPequeños.png" id="4_7oxsp"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://eu2pnsgou17q"]
+
+[ext_resource type="Texture2D" uid="uid://cl0qogw6rvkfi" path="res://Assets/Laberintos/Laberinto-Vacio.png" id="1_6fb5j"]
+[ext_resource type="PackedScene" uid="uid://blc0ljpx535h4" path="res://nodos/jugador.tscn" id="2_kikk5"]
+>>>>>>> de3418a6dbbf7283dbe64459abef4fb5a388479e
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohxao"]
 
@@ -40,9 +47,12 @@ size = Vector2(50, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_444gt"]
 size = Vector2(36, 28)
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjkg0"]
 size = Vector2(2.25, 2.25)
 
+=======
+>>>>>>> de3418a6dbbf7283dbe64459abef4fb5a388479e
 [node name="Node2D" type="Node2D"]
 
 [node name="Laberinto-vacio" type="Sprite2D" parent="."]
@@ -226,6 +236,7 @@ shape = SubResource("RectangleShape2D_imckq")
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_444gt")
+<<<<<<< HEAD
 
 [node name="Area2D2" type="Area2D" parent="."]
 script = ExtResource("3_fghf6")
@@ -236,3 +247,5 @@ texture = ExtResource("4_7oxsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2/Sprite2D"]
 shape = SubResource("RectangleShape2D_xjkg0")
+=======
+>>>>>>> de3418a6dbbf7283dbe64459abef4fb5a388479e
