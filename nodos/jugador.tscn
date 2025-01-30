@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://blc0ljpx535h4"]
+
+[ext_resource type="Script" path="res://nodos/jugador.gd" id="1_xt1hh"]
+[ext_resource type="Texture2D" uid="uid://cwf50qvyks18e" path="res://Assets/Personajes/Pacman-sprites-vivo.png" id="2_pxw1r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hphge"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_aigbu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_h3ac7"]
+resource_name = "moverse"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mrxu1"]
+_data = {
+"RESET": SubResource("Animation_aigbu"),
+"moverse": SubResource("Animation_h3ac7")
+}
+
+[node name="jugador" type="CharacterBody2D"]
+script = ExtResource("1_xt1hh")
+speed = 50.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.674072, 0.674072)
+texture = ExtResource("2_pxw1r")
+hframes = 3
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hphge")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_mrxu1")
+}
